@@ -1,0 +1,1 @@
+var input=document.getElementById("order_id"),statusText=document.getElementById("status");input.addEventListener("input",function(){var v=this.value.trim();statusText.innerHTML=v===""?"Enter Order ID":(!/^[0-9]+$/.test(v)?"Order ID must contain numbers only":"Waiting for Pickup");});
