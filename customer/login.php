@@ -67,7 +67,7 @@ required>
 
 <br><br>
 
-
+<a href="../index.php"> Main page </a>
 
 <center>
 
