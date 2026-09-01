@@ -30,8 +30,7 @@
 
 <input type="email" 
 name="email"
-value="<?php echo $_COOKIE['customer_email'] ?? ''; ?>"
-required>
+value="<?php echo $_COOKIE['customer_email'] ?? ''; ?>" required>
 
 
 

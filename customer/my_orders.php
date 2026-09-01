@@ -43,6 +43,8 @@ $result = mysqli_query($conn,$sql);
 
 <h2>My Orders</h2>
 
+<a href="track_order.php">Track Order</a>
+
 
 <?php while($row = mysqli_fetch_assoc($result)) { ?>
 <div class="order-card">
@@ -51,9 +53,14 @@ $result = mysqli_query($conn,$sql);
 <p><b>Delivery Address:</b><br><?php echo $row["delivery_address"]; ?></p>
 <p><b>Receiver Name:</b><br><?php echo $row["receiver_name"]; ?></p>
 <p><b>Product Details:</b><br><?php echo $row["product_details"]; ?></p>
-<p class="status"><?php echo $row["status"]; ?></p>
-<a href="track_order.php?id=<?php echo $row["order_id"]; ?>">Track Order</a>
+
+
+
+
+
 </div>
+
+
 <?php } ?>
 
 

@@ -3,9 +3,10 @@
 session_start();
 
 
-if(!isset($_SESSION["customer_id"]))
+if(!isset($_SESSION["customer_id"])) //customer id ase kina
 {
     header("location:login.php");
+exit();
 }
 
 
