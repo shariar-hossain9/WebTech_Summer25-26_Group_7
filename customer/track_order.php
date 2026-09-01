@@ -19,26 +19,46 @@ session_start();
 
 
 function checkStatus()
+
 {
-    let order_id = document.getElementById("order_id").value.trim();
-    let response = document.getElementById("status");
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200)
-        {
-            let data = JSON.parse(this.responseText);
-            response.innerHTML = data.status;
-        }
-        else{
-            document.getElementById("status").innerHTML = this.status;
-        }
-    }
-    xhttp.open("POST", "../ajax/get_status.php", true);
-    xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-    xhttp.send("order_id=" + encodeURIComponent(order_id));
+
+let order_id = document.getElementById("order_id").value;
+
+
+let xhr = new XMLHttpRequest();
+
+
+
+xhr.open(
+"GET",
+"../ajax/get_status.php?order_id="+order_id,
+true
+);
+
+
+
+xhr.onload=function()
+
+{
+
+let data = JSON.parse(this.responseText);
+
+
+document.getElementById("status").innerHTML=data.status;
+
+
 }
 
-setInterval(checkStatus, 3000);
+
+
+xhr.send();
+
+
+}
+
+
+
+setInterval(checkStatus,3000);
 
 
 
