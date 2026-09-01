@@ -22,11 +22,17 @@
 <h3>Select User Type</h3>
 
 
-<a class="back-btn" href="customer/login.php">
 
-Customer
 
-</a>
+
+
+
+
+
+
+
+
+
 
 
 <br><br><br>
