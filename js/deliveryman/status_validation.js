@@ -1,1 +1,0 @@
-document.querySelector("form").addEventListener("submit",function(e){if(valueOf(this,"order_id")===""){e.preventDefault();errorMessage("Order ID is required");}});
